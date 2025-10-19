@@ -1,0 +1,73 @@
+import { Instagram, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
+
+const Footer = () => {
+  return (
+    <footer className="bg-card border-t border-border py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {/* Logo and About */}
+          <div className="space-y-4">
+            <img src={logo} alt="Nyarugeta Pro" className="h-16 w-auto" />
+            <p className="text-sm text-muted-foreground">
+              Professional photography and media production services capturing life's most precious moments.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#booking" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Book Now
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone className="w-4 h-4 text-primary" />
+                <span>+250 XXX XXX XXX</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="w-4 h-4 text-primary" />
+                <span>info@nyarugetapro.com</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Kigali, Rwanda</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Instagram className="w-4 h-4 text-primary" />
+                <a href="#" className="hover:text-primary transition-colors">@nyarugetapro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-12 pt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Nyarugeta Pro. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
