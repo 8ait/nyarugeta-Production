@@ -40,23 +40,26 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3">
+              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>65 Benjamina Drive, Redbank Plains QLD 4301</span>
+              </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+250 XXX XXX XXX</span>
+                <a href="tel:0401017065" className="hover:text-primary transition-colors">0401 017 065</a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@nyarugetapro.com</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span>Kigali, Rwanda</span>
+                <a href="mailto:christian.nyarugeta@yahoo.com" className="hover:text-primary transition-colors">christian.nyarugeta@yahoo.com</a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Instagram className="w-4 h-4 text-primary" />
                 <a href="#" className="hover:text-primary transition-colors">@nyarugetapro</a>
               </li>
             </ul>
+            <p className="text-sm text-muted-foreground mt-4">
+              🕘 Opening at 9:00 AM
+            </p>
           </div>
         </div>
 

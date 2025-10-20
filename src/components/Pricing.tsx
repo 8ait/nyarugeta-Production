@@ -3,36 +3,120 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 
 const Pricing = () => {
-  const packages = [
+  const weddingPackages = [
     {
-      name: "STANDARD PACKAGE",
-      subtitle: "VIDEO AND PHOTO",
-      price: "$4,000",
-      breakdown: "Video: $2,500 | Photo: $1,500",
+      name: "WEDDING PREMIUM FULL PACKAGE",
+      subtitle: "VIDEO & PHOTO",
+      price: "A$4,500",
+      duration: "14 hrs 45 mins",
       features: [
-        "Unlimited photos and 50 Photoshop edited",
-        "13 hours shooting",
-        "2 videographers",
-        "Full wedding video",
-        "1 way of delivering by link",
+        "All-day shoot",
+        "Unlimited photos",
+        "Choice of photoshoot location",
+      ],
+      popular: true,
+    },
+    {
+      name: "WEDDING PREMIUM PACKAGE",
+      subtitle: "VIDEO PACKAGE",
+      price: "A$3,000",
+      duration: "14 hrs",
+      features: [
+        "10-minute wedding video highlights",
+        "Full wedding video edited",
+        "Posted to our social media",
       ],
       popular: false,
     },
     {
-      name: "PREMIUM PACKAGE",
-      subtitle: "VIDEO AND PHOTO",
-      price: "$4,500",
-      breakdown: "Video: $3,000 | Photo: $1,500",
+      name: "WEDDING PHOTO",
+      subtitle: "PHOTO PACKAGE",
+      price: "A$1,500",
+      duration: "14 hrs",
       features: [
-        "Unlimited photos and 50 edited in Photoshop",
-        "15 hours shooting",
-        "4 cameras onboard",
-        "3 videographers and 1 photographer",
-        "5 minutes highlights",
-        "Full wedding video and post it on our YouTube platform",
-        "Fast and 2 way delivery: by link and flash",
+        "Unlimited photos",
+        "Any location of your choice",
       ],
-      popular: true,
+      popular: false,
+    },
+  ];
+
+  const specialOccasions = [
+    {
+      name: "ENGAGEMENT VIDEO & PHOTO PACKAGE",
+      price: "A$2,700",
+      duration: "7 hrs",
+      features: [
+        "Unlimited photos",
+        "Full 3-hour video (super edited)",
+      ],
+    },
+    {
+      name: "BIRTHDAY PACKAGE",
+      price: "A$2,000",
+      duration: "6 hrs",
+      features: [
+        "Video and photo coverage",
+        "2-hour edited video",
+        "Unlimited photos",
+      ],
+    },
+  ];
+
+  const photoSessions = [
+    {
+      name: "FAMILY PHOTO",
+      price: "A$500",
+      duration: "3 hrs",
+      features: [
+        "20 edited photos",
+        "2 outfit changes",
+      ],
+    },
+    {
+      name: "OUTDOOR SHOOTS",
+      price: "A$450",
+      duration: "2 hrs 30 mins",
+      features: [
+        "12 edited photos",
+        "3 outfit changes",
+        "Any location in Brisbane",
+      ],
+    },
+    {
+      name: "COUPLE PHOTO SHOOTS",
+      price: "A$400",
+      duration: "3 hrs",
+      features: [
+        "12 edited photos",
+        "2 outfit changes",
+      ],
+    },
+    {
+      name: "STUDIO PHOTO SHOOTS",
+      price: "A$300",
+      duration: "3 hrs",
+      features: [
+        "12 edited pictures",
+        "3 outfit changes",
+      ],
+    },
+    {
+      name: "MATERNITY PHOTO SHOOTS",
+      price: "A$300",
+      duration: "3 hrs",
+      features: [
+        "3 outfit changes",
+        "12 edited photos",
+      ],
+    },
+    {
+      name: "SOCCER PHOTOS",
+      price: "A$250",
+      duration: "2 hrs",
+      features: [
+        "Unlimited photos",
+      ],
     },
   ];
 
@@ -41,68 +125,92 @@ const Pricing = () => {
     bookingSection?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const renderPackageCard = (pkg: any, index: number) => (
+    <Card
+      key={index}
+      className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${
+        pkg.popular
+          ? "border-primary shadow-lg shadow-primary/20"
+          : "border-border"
+      }`}
+    >
+      {pkg.popular && (
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1 text-sm font-semibold">
+          MOST POPULAR
+        </div>
+      )}
+      <CardHeader className="text-center pb-6 pt-8">
+        <CardTitle className="text-xl font-bold mb-2">
+          {pkg.name}
+        </CardTitle>
+        {pkg.subtitle && (
+          <CardDescription className="text-xs uppercase tracking-wide">
+            {pkg.subtitle}
+          </CardDescription>
+        )}
+        <div className="mt-4">
+          <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {pkg.price}
+          </div>
+          <div className="text-xs text-muted-foreground mt-2">
+            {pkg.duration}
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <ul className="space-y-3 mb-6">
+          {pkg.features.map((feature: string, idx: number) => (
+            <li key={idx} className="flex items-start gap-2">
+              <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span className="text-sm text-foreground/90">{feature}</span>
+            </li>
+          ))}
+        </ul>
+        <Button
+          onClick={scrollToBooking}
+          className="w-full"
+          variant={pkg.popular ? "default" : "outline"}
+        >
+          Book Now
+        </Button>
+      </CardContent>
+    </Card>
+  );
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
-      <div className="container mx-auto max-w-6xl">
+    <section id="pricing" className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
+      <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Our Packages
+            Our Packages & Pricing
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Choose the perfect package for your special day
+            Choose the perfect package for your special occasion
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {packages.map((pkg, index) => (
-            <Card
-              key={index}
-              className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${
-                pkg.popular
-                  ? "border-primary shadow-lg shadow-primary/20"
-                  : "border-border"
-              }`}
-            >
-              {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1 text-sm font-semibold">
-                  MOST POPULAR
-                </div>
-              )}
-              <CardHeader className="text-center pb-8 pt-8">
-                <CardTitle className="text-2xl font-bold mb-2">
-                  {pkg.name}
-                </CardTitle>
-                <CardDescription className="text-sm uppercase tracking-wide">
-                  {pkg.subtitle}
-                </CardDescription>
-                <div className="mt-4">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    {pkg.price}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-2">
-                    {pkg.breakdown}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4 mb-8">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground/90">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  onClick={scrollToBooking}
-                  className="w-full"
-                  variant={pkg.popular ? "default" : "outline"}
-                >
-                  Book This Package
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Wedding Packages */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8">Wedding Packages</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {weddingPackages.map((pkg, index) => renderPackageCard(pkg, index))}
+          </div>
+        </div>
+
+        {/* Special Occasions */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8">Special Occasions</h3>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {specialOccasions.map((pkg, index) => renderPackageCard(pkg, index))}
+          </div>
+        </div>
+
+        {/* Photo Sessions */}
+        <div>
+          <h3 className="text-3xl font-bold text-center mb-8">Photo Sessions</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {photoSessions.map((pkg, index) => renderPackageCard(pkg, index))}
+          </div>
         </div>
       </div>
     </section>
