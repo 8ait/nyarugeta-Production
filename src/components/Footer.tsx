@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Facebook, AtSign } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
@@ -55,6 +55,14 @@ const Footer = () => {
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Instagram className="w-4 h-4 text-primary" />
                 <a href="https://www.instagram.com/nyarugeta_production" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">@nyarugeta_production</a>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Facebook className="w-4 h-4 text-primary" />
+                <a href="https://www.facebook.com/chris.black.31945" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <AtSign className="w-4 h-4 text-primary" />
+                <a href="https://www.threads.com/@nyarugeta_production?xmt=AQF0eEn3UezOKKlOOwmwDTZkNWM7g8no-IyDZIpHNT0_q1A" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Threads</a>
               </li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
