@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone, MapPin, Facebook, AtSign } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Facebook, AtSign, Youtube } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
@@ -64,9 +64,13 @@ const Footer = () => {
                 <AtSign className="w-4 h-4 text-primary" />
                 <a href="https://www.threads.com/@nyarugeta_production?xmt=AQF0eEn3UezOKKlOOwmwDTZkNWM7g8no-IyDZIpHNT0_q1A" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Threads</a>
               </li>
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Youtube className="w-4 h-4 text-primary" />
+                <a href="https://www.youtube.com/@chrisnyarugeta8814" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">YouTube</a>
+              </li>
             </ul>
             <p className="text-sm text-muted-foreground mt-4">
-              🕘 Opening at 9:00 AM
+              🕘 Open from 9:00 AM
             </p>
           </div>
         </div>
