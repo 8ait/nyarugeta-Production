@@ -54,7 +54,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Instagram className="w-4 h-4 text-primary" />
-                <a href="https://www.instagram.com/nyarugeta_production" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">@nyarugeta_production</a>
+                <a href="https://www.instagram.com/nyarugeta_production" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Facebook className="w-4 h-4 text-primary" />
