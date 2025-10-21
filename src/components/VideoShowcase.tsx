@@ -27,7 +27,7 @@ const VideoShowcase = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/9atGKyq9hfw?start=2760"
+              src="https://www.youtube.com/embed/9atGKyq9hfw?autoplay=1&mute=1&vq=hd1080"
               title="Nyarugeta Production Video 1"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -40,7 +40,7 @@ const VideoShowcase = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/axHDorxO_zs?start=236"
+              src="https://www.youtube.com/embed/axHDorxO_zs?autoplay=1&mute=1&vq=hd1080"
               title="Nyarugeta Production Video 2"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -53,7 +53,7 @@ const VideoShowcase = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/zA-wR70ap4o?start=105"
+              src="https://www.youtube.com/embed/zA-wR70ap4o?autoplay=1&mute=1&vq=hd1080"
               title="Nyarugeta Production Video 3"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -66,7 +66,7 @@ const VideoShowcase = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/AmCBidZeP8g"
+              src="https://www.youtube.com/embed/AmCBidZeP8g?autoplay=1&mute=1&vq=hd1080"
               title="Nyarugeta Production Video 4"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
