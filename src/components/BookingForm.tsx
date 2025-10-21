@@ -25,52 +25,33 @@ import { Calendar, Send } from "lucide-react";
 
 const eventServices = {
   wedding: [
-    "Full Day Coverage",
-    "Bridal Preparation",
-    "Ceremony Coverage",
-    "Reception Coverage",
-    "Engagement Shoot",
-    "Pre-wedding Shoot"
+    "Wedding Premium Full Package (Video & Photo) - A$4,500",
+    "Wedding Premium Package (Video) - A$3,000",
+    "Wedding Photo Package - A$1,500"
   ],
-  portrait: [
-    "Professional Headshots",
-    "Personal Portraits",
-    "Family Portraits",
-    "Couple Portraits",
-    "Studio Session",
-    "Outdoor Session"
+  engagement: [
+    "Engagement Video & Photo Package - A$2,700"
+  ],
+  birthday: [
+    "Birthday Package (Video & Photo) - A$2,000"
+  ],
+  family: [
+    "Family Photo - A$500"
+  ],
+  outdoor: [
+    "Outdoor Shoots - A$450"
+  ],
+  couple: [
+    "Couple Photo Shoots - A$400"
+  ],
+  studio: [
+    "Studio Photo Shoots - A$300"
   ],
   maternity: [
-    "Indoor Studio Shoot",
-    "Outdoor Location Shoot",
-    "Couple Maternity Shoot",
-    "Solo Maternity Shoot",
-    "Newborn Photography",
-    "Maternity Milestone"
+    "Maternity Photo Shoots - A$300"
   ],
-  kids: [
-    "Birthday Party Coverage",
-    "Studio Portrait",
-    "Outdoor Playtime Shoot",
-    "Newborn Photography",
-    "Milestone Photography",
-    "Family with Kids"
-  ],
-  corporate: [
-    "Conference Coverage",
-    "Team Building Events",
-    "Corporate Portraits",
-    "Product Launch",
-    "Award Ceremony",
-    "Office Event"
-  ],
-  event: [
-    "Birthday Parties",
-    "Anniversary Celebration",
-    "Graduation Ceremony",
-    "Engagement Party",
-    "Baby Shower",
-    "Other Celebrations"
+  soccer: [
+    "Soccer Photos - A$250"
   ]
 };
 
@@ -190,12 +171,15 @@ const BookingForm = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent className="bg-popover z-50">
-                          <SelectItem value="wedding">Wedding</SelectItem>
-                          <SelectItem value="portrait">Portrait Session</SelectItem>
-                          <SelectItem value="maternity">Maternity Shoot</SelectItem>
-                          <SelectItem value="kids">Kids Photography</SelectItem>
-                          <SelectItem value="corporate">Corporate Event</SelectItem>
-                          <SelectItem value="event">Event Photography</SelectItem>
+                          <SelectItem value="wedding">Wedding Packages</SelectItem>
+                          <SelectItem value="engagement">Engagement</SelectItem>
+                          <SelectItem value="birthday">Birthday</SelectItem>
+                          <SelectItem value="family">Family Photo</SelectItem>
+                          <SelectItem value="outdoor">Outdoor Shoots</SelectItem>
+                          <SelectItem value="couple">Couple Photo Shoots</SelectItem>
+                          <SelectItem value="studio">Studio Photo Shoots</SelectItem>
+                          <SelectItem value="maternity">Maternity Photo Shoots</SelectItem>
+                          <SelectItem value="soccer">Soccer Photos</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
