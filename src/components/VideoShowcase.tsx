@@ -22,13 +22,52 @@ const VideoShowcase = () => {
           </p>
         </div>
 
-        <div className="mb-12">
-          <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
             <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/9atGKyq9hfw?start=2760"
-              title="Nyarugeta Production Video Work"
+              title="Nyarugeta Production Video 1"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+          
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/axHDorxO_zs?start=236"
+              title="Nyarugeta Production Video 2"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+          
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/zA-wR70ap4o?start=105"
+              title="Nyarugeta Production Video 3"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+          
+          <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/AmCBidZeP8g"
+              title="Nyarugeta Production Video 4"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
