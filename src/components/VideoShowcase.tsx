@@ -1,13 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mic2, Youtube } from "lucide-react";
+import PodcastInterestForm from "./PodcastInterestForm";
 
 const VideoShowcase = () => {
-  const handlePodcastInterest = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const [showPodcastForm, setShowPodcastForm] = useState(false);
 
   return (
     <section className="py-20 px-4 bg-secondary/20">
@@ -87,7 +84,7 @@ const VideoShowcase = () => {
           </p>
           <Button 
             size="lg" 
-            onClick={handlePodcastInterest}
+            onClick={() => setShowPodcastForm(true)}
             className="gap-2"
           >
             <Mic2 className="w-5 h-5" />
@@ -95,6 +92,11 @@ const VideoShowcase = () => {
           </Button>
         </div>
       </div>
+      
+      <PodcastInterestForm 
+        open={showPodcastForm} 
+        onOpenChange={setShowPodcastForm}
+      />
     </section>
   );
 };
